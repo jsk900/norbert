@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: #262626;
+}
+
+.App-header {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.api {
+  position: relative;
+  top: 10%;
+  font-size: 2rem;
+  color: white;
+}
