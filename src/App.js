@@ -1,24 +1,40 @@
 import React, { PureComponent } from "react";
 
 import "./App.css";
-// import Header from "./components/header";
-import getImages from "./components/api";
+import Header from "./components/header";
+import getData from "./components/api";
 
 class App extends PureComponent {
   state = {
-    picUrl: []
+    data: []
   };
 
-  componentWillMount() {
-    const url = getImages();
-    this.setState({ picUrL: url });
+  async componentDidMount() {
+    this.setState({ data: await getData() });
   }
 
   render() {
+    if (!this.state.data.length) {
+      return <p>loading....</p>;
+    }
     return (
-      <li>
-        <img src={this.state.picUrl} alt="" />
-      </li>
+      <div className="main">
+        <Header />
+        <div className="images">
+          {this.state.data.map(link => (
+            <ul>
+              <li key={link.id}>
+                <p>{link.title}</p>
+                <img
+                  src={`https://farm${link.farm}.staticflickr.com/${
+                    link.server
+                  }/${link.id}_${link.secret}_s.jpg`}
+                />
+              </li>
+            </ul>
+          ))}
+        </div>
+      </div>
     );
   }
 }
