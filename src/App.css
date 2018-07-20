@@ -21,7 +21,7 @@
 
 .images {
   position: absolute;
-  top: 15%;
+  top: 10%;
   text-align: center;
 }
 
@@ -41,8 +41,6 @@
 .images img {
   text-align: center;
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
 }
 
 .images ul li p {
