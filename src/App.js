@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import Link, { link } from "react-dom";
 
 import "./App.css";
 import Header from "./components/header.jsx";
@@ -9,20 +10,20 @@ class App extends PureComponent {
     data: []
   };
 
-  renderData = () => {
-    return this.state.data.map(link => (
+  renderData = () =>
+    this.state.data.map(flickr => (
       <ul>
-        <li key={link.id}>
-          <p>{link.title}</p>
+        <li key={flickr.id}>
+          <p>{flickr.title}</p>
+
           <img
-            src={`https://farm${link.farm}.staticflickr.com/${link.server}/${
-              link.id
-            }_${link.secret}_s.jpg`}
+            src={`https://farm${flickr.farm}.staticflickr.com/${
+              flickr.server
+            }/${flickr.id}_${flickr.secret}_s.jpg`}
           />
         </li>
       </ul>
     ));
-  };
 
   async componentDidMount() {
     this.setState({ data: await getData() });
