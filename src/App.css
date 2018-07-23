@@ -19,9 +19,41 @@
   font-size: 1.5em;
 }
 
+nav {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul {
+  display: inline-flex;
+  padding: 3%;
+  text-align: center;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 3%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  padding: 3%;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+  filter: brightness(120%);
+}
+
 .images {
   position: absolute;
-  top: 10%;
+  top: 15%;
   text-align: center;
 }
 
@@ -54,4 +86,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100px;
+}
+
+p {
+  color: #fff;
 }

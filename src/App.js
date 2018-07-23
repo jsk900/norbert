@@ -1,9 +1,9 @@
 import React, { PureComponent } from "react";
-import Link, { link } from "react-dom";
+import { Link } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/header.jsx";
-import getData from "./api";
+import getImages from "./getImages";
 
 class App extends PureComponent {
   state = {
@@ -13,20 +13,29 @@ class App extends PureComponent {
   renderData = () =>
     this.state.data.map(flickr => (
       <ul>
-        <li key={flickr.id}>
-          <p>{flickr.title}</p>
+        <Link
+          to={{
+            pathname: `/detail/${flickr.id}`,
+            state: {
+              id: flickr.id
+            }
+          }}
+        >
+          <li key={flickr.id}>
+            <p>{flickr.title}</p>
 
-          <img
-            src={`https://farm${flickr.farm}.staticflickr.com/${
-              flickr.server
-            }/${flickr.id}_${flickr.secret}_s.jpg`}
-          />
-        </li>
+            <img
+              src={`https://farm${flickr.farm}.staticflickr.com/${
+                flickr.server
+              }/${flickr.id}_${flickr.secret}_s.jpg`}
+            />
+          </li>
+        </Link>
       </ul>
     ));
 
   async componentDidMount() {
-    this.setState({ data: await getData() });
+    this.setState({ data: await getImages() });
   }
 
   render() {
