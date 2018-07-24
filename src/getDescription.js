@@ -4,7 +4,10 @@ const getDescription = async props => {
   const flickr = `https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=${api_key}&photo_id=${props}&format=json&nojsoncallback=1`;
   const apiCall = await fetch(`${flickr}`);
   const data = await apiCall.json();
-  return data;
+
+  const { farm, server, id, secret } = await data.photo;
+  const description = await data.photo.description._content;
+  return { description, farm, server, id, secret };
 };
 
 export default getDescription;

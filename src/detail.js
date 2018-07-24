@@ -5,36 +5,23 @@ import getDescription from "./getDescription";
 
 class Detail extends PureComponent {
   state = {
-    data: [],
-    description: null,
-    farm: null,
-    server: null,
-    id: null,
-    secret: null
+    data: {}
   };
 
   async componentDidMount() {
     this.setState({
       data: await getDescription(this.props.location.state.id)
     });
-    this.setState({
-      description: this.state.data.photo.description._content,
-      farm: this.state.data.photo.farm,
-      server: this.state.data.photo.server,
-      id: this.state.data.photo.id,
-      secret: this.state.data.photo.secret
-    });
   }
 
   render() {
+    const { description, farm, server, id, secret } = this.state.data;
     return (
       <div>
         <Header />
-        <p>{this.state.description}</p>
+        <p>{description}</p>
         <img
-          src={`https://farm${this.state.farm}.staticflickr.com/${
-            this.state.server
-          }/${this.state.id}_${this.state.secret}_z.jpg`}
+          src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
         />
       </div>
     );
