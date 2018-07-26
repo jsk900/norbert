@@ -23,16 +23,17 @@ class Detail extends PureComponent {
   }
 
   render() {
-    // const { farm, server, id, secret } = this.state.data.photo;
+    const { farm, server, id, secret } = this.state.photo;
+    const description = this.state.description;
+    const title = this.props.location.state.title;
+
     return (
       <div>
         <Header />
-        <p>{this.state.description}</p>
-        <p>{this.props.location.state.title}</p>
+        <p>{description}</p>
+        <p>{title}</p>
         <img
-          src={`https://farm${this.state.photo.farm}.staticflickr.com/${
-            this.state.photo.server
-          }/${this.state.photo.id}_${this.state.photo.secret}_z.jpg`}
+          src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
         />
       </div>
     );

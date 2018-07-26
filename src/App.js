@@ -7,7 +7,6 @@ import getFlickrInfo from "./getFlickrInfo";
 
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=95388692@N07&format=json&nojsoncallback=1`;
-const images = true;
 
 // Norbert = 95388692@N07
 // Joey    = 66845042@N04
@@ -21,6 +20,7 @@ class App extends PureComponent {
   renderData = () =>
     this.state.results.map(flickr => (
       <ul key={flickr.id}>
+        {/* Link start */}
         <Link
           to={{
             pathname: `/detail/${flickr.id}`,
@@ -32,6 +32,7 @@ class App extends PureComponent {
               title: flickr.title
             }
           }}
+          //Link end
         >
           <li>
             <p>{flickr.title}</p>
@@ -47,7 +48,7 @@ class App extends PureComponent {
     ));
 
   async componentDidMount() {
-    this.setState({ data: await getFlickrInfo({ api_images, images }) });
+    this.setState({ data: await getFlickrInfo({ api_images }) });
     this.setState({ results: await this.state.data.photos.photo });
   }
 
