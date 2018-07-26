@@ -1,27 +1,38 @@
 import React, { PureComponent } from "react";
 
-import Header from "./components/header.jsx";
-import getDescription from "./getDescription";
+import Header from "./Header";
+import getFlickrInfo from "./getFlickrInfo";
 
 class Detail extends PureComponent {
   state = {
-    data: {}
+    data: {},
+    description: "",
+    photo: {}
   };
 
   async componentDidMount() {
     this.setState({
-      data: await getDescription(this.props.location.state.id)
+      data: await getFlickrInfo(`${this.props.location.state.api_description}`)
+    });
+    this.setState({
+      description: this.state.data.photo.description._content
+    });
+    this.setState({
+      photo: this.state.data.photo
     });
   }
 
   render() {
-    const { description, farm, server, id, secret } = this.state.data;
+    // const { farm, server, id, secret } = this.state.data.photo;
     return (
       <div>
         <Header />
-        <p>{description}</p>
+        <p>{this.state.description}</p>
+        <p>{this.props.location.state.title}</p>
         <img
-          src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
+          src={`https://farm${this.state.photo.farm}.staticflickr.com/${
+            this.state.photo.server
+          }/${this.state.photo.id}_${this.state.photo.secret}_z.jpg`}
         />
       </div>
     );
