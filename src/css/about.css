@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bitter", sans-serif;
+}
+
+.clip5 {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to left top,
+    #855104,
+    #7a5500,
+    #6e5800,
+    #635a04,
+    #585c0c
+  );
+  -webkit-clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
+  z-index: -1;
+  position: absolute;
+  opacity: 0.4;
+}
+.about h3 {
+  padding: 50px 20px 10px 20px;
+  font-size: 2em;
+  color: #855104;
+}
+.grid {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 150px 520px 150px 520px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 3px;
+}
+.grid img {
+  padding: 20px 7px;
+}
+.grid p {
+  width: 500px;
+  line-height: 30px;
+  position: relative;
+  padding: 30px 7px;
+  font-size: 1em;
+  color: #855104;
+  border-bottom: 1px solid #855104;
+}
+@media (max-width: 768px) {
+  .clip1 {
+    opacity: 0;
+  }
+  .about h3 {
+    padding: 30px 20px 10px 20px;
+    font-size: 1em;
+    color: #855104;
+  }
+  .grid {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 3px;
+  }
+  .grid img {
+    padding: 20px 7px;
+  }
+  .grid p {
+    /* width: 350px; */
+    line-height: 20px;
+    position: relative;
+    padding: 30px 7px;
+    font-size: 1em;
+    color: #855104;
+    border-bottom: 1px solid #855104;
+  }
+}

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bitter", sans-serif;
+}
+
+.exibitions {
+  width: 100%;
+  height: 100vh;
+  background-color: #d5dfda;
+}
+
+.clip4 {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(99% 97%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(99% 97%, 100% 0, 100% 100%, 0% 100%);
+  background-image: linear-gradient(
+    to right top,
+    #313533,
+    #565b59,
+    #7e8581,
+    #a8b1ad,
+    #d5dfda
+  );
+  z-index: -1;
+  opacity: 0.4;
+}
+.place {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 85vh;
+  background-image: url("../images/metzel.fw.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 7px 6px 4px -1px rgba(87, 44, 5, 1);
+  -moz-box-shadow: 7px 6px 4px -1px rgba(87, 44, 5, 1);
+  box-shadow: 7px 6px 4px -1px rgba(87, 44, 5, 1);
+  border-top-left-radius: 20px;
+  border: 1px solid #572c05;
+}
+.place p:nth-of-type(1) {
+  padding: 75px 0 6px 0;
+}
+.place p {
+  padding: 20px 0 6px 0;
+  font-size: 0.7em;
+  color: #262626;
+  line-height: 0;
+  font-weight: bold;
+}
+.place p span {
+  font-size: 1em;
+  color: #572c05;
+  padding-right: 5px;
+  padding-left: 50px;
+  font-weight: bolder;
+}

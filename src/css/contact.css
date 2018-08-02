@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bitter", sans-serif;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/contact_back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.clip6 {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
+  background-image: linear-gradient(
+    to right top,
+    #fa261a,
+    #f93524,
+    #f8412c,
+    #f74b35,
+    #f5543d
+  );
+  z-index: -1;
+  opacity: 0.4;
+}
+section {
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(
+    to right top,
+    #fa261a,
+    #f93524,
+    #f8412c,
+    #f74b35,
+    #f5543d
+  );
+  opacity: 0.4;
+}
+section img {
+  padding: 20px;
+}
+section p {
+  position: relative;
+  top: -30%;
+  font-size: 1em;
+  font-weight: 300;
+  color: #fff;
+  display: inline-block;
+}
