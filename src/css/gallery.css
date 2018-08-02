@@ -8,7 +8,7 @@
 
 .main {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: #262626;
   background-image: url("../images/blu-stripes.png");
 }
@@ -28,6 +28,9 @@
 .images img {
   border: 10px solid transparent;
   border-image: url("../images/border2.fw.png") 20 stretch;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(38, 38, 38, 1);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(38, 38, 38, 1);
+  box-shadow: 4px 4px 4px 0px rgba(38, 38, 38, 1);
 }
 .images ul li p {
   color: #fff;

@@ -61,6 +61,7 @@ class App extends PureComponent {
     }
     return (
       <div className="main">
+        <div className="clip2" />
         <Header theme={theme} />
 
         <div className="images">

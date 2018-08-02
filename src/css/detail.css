@@ -9,8 +9,20 @@
 .detail {
   width: 100%;
   height: 100vh;
-  background-color: #1b085f;
+  background-color: #022518;
   background-image: url("../images/blu-stripes.png");
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30px 55vh 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .clip3 {
@@ -29,59 +41,22 @@
   z-index: -1;
   opacity: 0.4;
 }
-.minus {
-  position: absolute;
-  top: 26.3%;
-  left: 35%;
-  transform: translate(-35%, -26.3%);
-  width: 30px;
-  height: 30px;
-  background-color: #999907;
-  color: #262626;
-  font-size: 1.5em;
-  text-align: center;
-  border: 1px solid #d7e401;
+.container img {
   cursor: pointer;
-}
-.plus {
-  position: absolute;
-  top: 26.3%;
-  left: 64.9%;
-  transform: translate(-64.9%, -26.3%);
-  width: 30px;
-  height: 30px;
-  background-color: #999907;
-  color: #262626;
-  font-size: 1.5em;
-  text-align: center;
-  border: 1px solid #d7e401;
-  cursor: pointer;
-}
-.detail img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: 10px solid transparent;
   border-image: url("../images/border2.fw.png") 20 stretch;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
+  box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
+  grid-row: 2/2;
 }
 .title {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 340px;
-  transform: translate(-50%, -20%);
+  grid-row: 1/1;
   font-size: 1em;
-  color: #999907;
-  text-align: center;
+  color: yellow;
 }
 .description {
-  position: absolute;
-  top: 27.7%;
-  left: 90%;
-  width: 340px;
-  transform: translate(-90%, -27.7%);
   font-size: 1em;
-  color: #999907;
-  text-align: center;
+  grid-row: 3/3;
+  color: yellow;
 }
