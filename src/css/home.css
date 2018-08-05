@@ -31,11 +31,11 @@
   clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
   background-image: linear-gradient(
     to right top,
-    #262626,
-    #343333,
-    #424141,
-    #504f4e,
-    #5e5e5c
+    #005930,
+    #266b37,
+    #427d3e,
+    #5d9044,
+    #7aa24b
   );
   z-index: -1;
   opacity: 0.4;
