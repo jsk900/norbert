@@ -72,3 +72,18 @@
   -moz-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
   box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
 }
+@media screen and (max-width: 600px) {
+  .clip3 {
+    display: none;
+  }
+  .container {
+    top: 20%;
+  }
+  .image_container {
+    top: 40%;
+  }
+  .image_container img {
+    width: 100%;
+    height: 100%;
+  }
+}

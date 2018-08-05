@@ -9,7 +9,7 @@ const Contact = () => (
     <Header />
     <div className="contact_details">
       <img src={require("./images/contact.jpg")} />
-      <p>Leipziger Strasse 63 10117 Berlin Germany</p>
+      <p>Leipziger Strasse 63. 10117 Berlin, Germany</p>
       <p>+49 (0) 30 75 56 50 62</p>
       <p>
         <a href="mailto:norkart@gmx.de">Contact Me</a>

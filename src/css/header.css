@@ -49,3 +49,17 @@ a {
 .menu ul li a:hover {
   padding-left: 30px;
 }
+
+@media screen and (max-width: 480px) {
+  .menu {
+    margin-left: 0;
+  }
+  .menu ul li a {
+    letter-spacing: 0;
+    font-size: 0.5em;
+  }
+  .menu h3 {
+    font-size: 0.6em;
+    width: 70px;
+  }
+}
