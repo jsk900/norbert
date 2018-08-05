@@ -102,6 +102,9 @@ h4 {
     justify-items: center;
     grid-gap: 5px;
   }
+  .clip5 {
+    display: none;
+  }
   .grid p {
     padding-bottom: 10%;
   }
