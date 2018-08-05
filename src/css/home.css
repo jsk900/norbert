@@ -50,3 +50,11 @@
 .home h1:hover {
   color: #262626;
 }
+@media screen and (max-width: 500px) {
+  .clip1 {
+    display: none;
+  }
+  .home h1 {
+    font-size: 1em;
+  }
+}

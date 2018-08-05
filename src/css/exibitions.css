@@ -72,8 +72,12 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .clip4 {
+    display: none;
+  }
   .paragraphs p {
     font-size: 0.5em;
+    padding: 4px 5px;
   }
   .paragraphs p span {
     font-size: 0.7em;
