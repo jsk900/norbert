@@ -1,18 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Bitter");
+@import url("https://fonts.googleapis.com/css?family=Monserrat");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Bitter", sans-serif;
+  font-family: "Monserrat", sans-serif;
 }
 
-/* Main page ....................................... */
-.home-back {
+.home {
   width: 100%;
   height: 100vh;
-  background-image: url("../images/home_back.jpg");
+  background-image: url(../images/home_back.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  animation: home 1s ease-in forwards;
+}
+
+@keyframes home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .clip1 {
@@ -20,23 +29,24 @@
   height: 100%;
   -webkit-clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
-  background-color: #19aa06;
+  background-image: linear-gradient(
+    to right top,
+    #262626,
+    #343333,
+    #424141,
+    #504f4e,
+    #5e5e5c
+  );
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.4;
 }
-
-.main_title {
+.home h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3em;
-  color: #262626;
+  color: #000;
 }
-
-@media (max-width: 768px) {
-  .main_title {
-    font-size: 1em;
-    color: #262626;
-  }
+.home h1:hover {
+  color: #262626;
 }

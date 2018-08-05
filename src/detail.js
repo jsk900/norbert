@@ -78,20 +78,21 @@ class Detail extends PureComponent {
     const { farm, server, id, secret } = this.state.photo;
     const description = this.state.description;
     const title = this.state.title;
-    const theme = "menu-bar3";
 
     return (
       <div className="detail">
         <div className="clip3" />
         <React.Fragment>
-          <Header theme={theme} />
+          <Header />
           <div className="container">
             <p className="title">{title}</p>
+            <p className="description">{description}</p>
+          </div>
+          <div className="image_container">
             <img
               onClick={this._PlusGetInfo}
-              src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_n.jpg`}
+              src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
             />
-            <p className="description">{description}</p>
           </div>
         </React.Fragment>
       </div>

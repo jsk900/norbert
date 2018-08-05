@@ -1,45 +1,46 @@
-@import url("https://fonts.googleapis.com/css?family=Bitter");
+@import url("https://fonts.googleapis.com/css?family=Monserrat");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Bitter", sans-serif;
+  font-family: "Monserrat", sans-serif;
 }
 
 .main {
   width: 100%;
   min-height: 100vh;
-  background-color: #262626;
-  background-image: url("../images/blu-stripes.png");
+  background-color: #fff;
 }
 
 .images {
-  text-align: center;
   flex-grow: 1;
 }
+
 .images ul {
-  padding: 60px 250px 10px 250px;
+  padding-left: 20%;
+  padding-top: 1%;
 }
 .images ul li {
-  display: inline-block;
+  float: left;
   list-style: none;
-  padding: 10px 5px 0 5px;
+  padding: 5px;
 }
 .images img {
-  border: 10px solid transparent;
-  border-image: url("../images/border2.fw.png") 20 stretch;
   -webkit-box-shadow: 4px 4px 4px 0px rgba(38, 38, 38, 1);
   -moz-box-shadow: 4px 4px 4px 0px rgba(38, 38, 38, 1);
   box-shadow: 4px 4px 4px 0px rgba(38, 38, 38, 1);
+  animation: gallery 2s linear forwards;
 }
-.images ul li p {
-  color: #fff;
-  font-size: 0.7rem;
-  width: 100px;
-  padding: 5px 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100px;
+
+@keyframes gallery {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.images img:hover {
+  filter: brightness(120%);
 }

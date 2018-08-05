@@ -2,15 +2,13 @@ import React from "react";
 import Header from "./Header";
 import "./css/about.css";
 
-const theme = "menu-bar5";
 const About = () => (
   <div className="about">
     <div className="clip5" />
+    <Header />
 
-    <Header theme={theme} />
-
-    <h3>Surreal, abstract and figurative</h3>
     <div className="grid">
+      <h4>Surreal, abstract and figurative</h4>
       <img src={require("./images/kopf2.fw.png")} />
       <p>
         ...are just few words that can be used to describe the artwork of

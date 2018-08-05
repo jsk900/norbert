@@ -8,8 +8,6 @@ import "./css/gallery.css";
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=95388692@N07&format=json&nojsoncallback=1`;
 
-const theme = "menu-bar2";
-
 // Norbert = 95388692@N07
 // Joey    = 66845042@N04
 
@@ -40,12 +38,10 @@ class App extends PureComponent {
         }}
       >
         <li key={flickr.id}>
-          <p>{flickr.title}</p>
-
           <img
             src={`https://farm${flickr.farm}.staticflickr.com/${
               flickr.server
-            }/${flickr.id}_${flickr.secret}_s.jpg`}
+            }/${flickr.id}_${flickr.secret}_m.jpg`}
           />
         </li>
       </Link>
@@ -62,7 +58,8 @@ class App extends PureComponent {
     return (
       <div className="main">
         <div className="clip2" />
-        <Header theme={theme} />
+
+        <Header />
 
         <div className="images">
           <ul>{this.renderData()}</ul>

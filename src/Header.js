@@ -1,28 +1,36 @@
 import React, { PureComponent } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import "./css/header.css";
 
 class Header extends PureComponent {
   render() {
     return (
-      <div className={this.props.theme}>
+      <div className="menu">
+        <Link to="/">
+          <h3>Norbert Karrass</h3>
+        </Link>
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/gallery" activeStyle={{ color: "#f78b10" }}>
+                Gallery
+              </NavLink>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <NavLink to="/about" activeStyle={{ color: "#f78b10" }}>
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/exibitions">Exibitions</Link>
+              <NavLink to="/exibitions" activeStyle={{ color: "#f78b10" }}>
+                Exibitions
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
+              <NavLink to="/contact" activeStyle={{ color: "#f78b10" }}>
+                Contact
+              </NavLink>
             </li>
           </ul>
         </nav>
