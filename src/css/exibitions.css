@@ -55,8 +55,11 @@
   font-weight: bold;
   padding-right: 4px;
 }
-.paragraphs iframe {
+.paragraphs img {
   position: absolute;
-  top: 10%;
+  top: 2%;
   left: 50%;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
+  box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
 }

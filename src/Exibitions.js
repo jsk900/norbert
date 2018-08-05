@@ -87,12 +87,7 @@ const Exibitions = () => (
       <p>
         <span>1994</span>Zeche "Carl" Gallery, Essen, Germany
       </p>
-      <iframe
-        src={require("./images/norbert.mp4")}
-        width="640"
-        height="320"
-        sandbox
-      />
+      <img src={require("./images/exibitions.jpg")} />
     </div>
   </div>
 );

@@ -21,7 +21,7 @@
   padding-top: 1%;
 }
 .images ul li {
-  float: left;
+  display: inline-flex;
   list-style: none;
   padding: 5px;
 }

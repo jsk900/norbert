@@ -41,7 +41,7 @@ class App extends PureComponent {
           <img
             src={`https://farm${flickr.farm}.staticflickr.com/${
               flickr.server
-            }/${flickr.id}_${flickr.secret}_m.jpg`}
+            }/${flickr.id}_${flickr.secret}_q.jpg`}
           />
         </li>
       </Link>
