@@ -42,11 +42,11 @@
 }
 
 .images img:hover {
-  filter: brightness(120%);
+  filter: brightness(110%);
 }
 
 @media screen and (max-width: 580px) {
   .images ul {
-    padding-left: 30%;
+    padding-left: 35%;
   }
 }

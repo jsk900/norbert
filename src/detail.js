@@ -85,8 +85,8 @@ class Detail extends PureComponent {
         <React.Fragment>
           <Header />
           <div className="container">
-            <p className="title">{title}</p>
-            <p className="description">{description}</p>
+            <h6>{title}</h6>
+            <p>{description}</p>
           </div>
           <div className="image_container">
             <img

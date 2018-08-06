@@ -65,7 +65,8 @@
 }
 @media screen and (max-width: 700px) {
   .paragraphs {
-    padding-left: 40%;
+    padding-top: 10%;
+    padding-left: 30%;
   }
   .paragraphs img {
     display: none;
