@@ -63,5 +63,7 @@ a {
   .menu h3 {
     font-size: 0.6em;
     width: 70px;
+    color: #262626;
+    font-weight: bold;
   }
 }
