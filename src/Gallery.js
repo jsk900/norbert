@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Header from "./Header";
 import getFlickrInfo from "./getFlickrInfo";
+import Spinner from "./Spinner";
 import "./css/gallery.css";
 
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
@@ -53,7 +54,7 @@ class App extends PureComponent {
 
   render() {
     if (!this.state.results.length) {
-      return <p>loading....</p>;
+      return <Spinner />;
     }
     return (
       <div className="main">
