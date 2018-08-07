@@ -153,3 +153,11 @@
     grid-column: 1;
   }
 }
+@media only screen and (min-width: 321px) {
+  .clip5 {
+    display: none;
+  }
+  .grid p {
+    padding-left: 20px;
+  }
+}

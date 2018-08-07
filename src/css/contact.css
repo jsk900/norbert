@@ -77,3 +77,12 @@
     height: 100%;
   }
 }
+@media only screen and (min-width: 321px) {
+  .clip6 {
+    display: none;
+  }
+  .contact_details img {
+    width: 80%;
+    height: 80%;
+  }
+}

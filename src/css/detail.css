@@ -99,3 +99,32 @@
     height: 100%;
   }
 }
+@media only screen and (min-width: 321px) {
+  .clip3 {
+    display: none;
+  }
+  .container {
+    width: 170px;
+    top: 20%;
+    left: 40%;
+    transform: translate(-20%, -40%);
+    padding-bottom: 5%;
+  }
+  .image_container {
+    top: 60%;
+    left: 55%;
+  }
+  .container h6 {
+    font-size: 0.8;
+    text-align: center;
+  }
+  .container p {
+    text-align: center;
+    width: 100%;
+  }
+  .image_container img {
+    padding-top: 10%;
+    width: 80%;
+    height: 80%;
+  }
+}
