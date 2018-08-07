@@ -68,7 +68,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 321px) {
+@media only screen and (min-width: 360px) and (max-width: 640px) {
   .menu h3 {
     font-size: 0.6em;
     width: 80px;
