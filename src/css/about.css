@@ -50,7 +50,7 @@
   grid-gap: 15px;
 }
 .grid h4 {
-  color: #855104;
+  color: #220a02;
   grid-row: 1/1;
   grid-column: 1 / span 2;
 }
@@ -73,7 +73,7 @@
 .grid p {
   line-height: 20px;
   font-size: 1em;
-  color: #855104;
+  color: #220a02;
 }
 .grid p:nth-of-type(1) {
   grid-row: 2;
