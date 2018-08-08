@@ -13,7 +13,7 @@ const Exibitions = () => (
       <p>
         <span>2015</span>Kastenmeiers im Kurländer Palais, Dresden, Germany
       </p>
-      <p>BBBank - Filiale am Hausvogteiplatz, Berlin, Germany</p>
+      <p id="indent">BBBank - Filiale am Hausvogteiplatz, Berlin, Germany</p>
 
       <p>
         <span>2013</span>Menzsen Gallery, Berlin, Germany
@@ -34,8 +34,8 @@ const Exibitions = () => (
       <p>
         <span>2009</span>Ezair Gallery, New York, USA
       </p>
-      <p>Eveline Luppi Gallery, Rhode Island, USA</p>
-      <p>Florence Art Biennale ́09, Florence, Italy</p>
+      <p id="indent">Eveline Luppi Gallery, Rhode Island, USA</p>
+      <p id="indent">Florence Art Biennale ́09, Florence, Italy</p>
 
       <p>
         <span>2008</span>Eveline Luppi Gallery, Rhode Island, USA
@@ -56,29 +56,29 @@ const Exibitions = () => (
       <p>
         <span>2002</span>Springer Gallery, Berlin, Germany
       </p>
-      <p>Palazzo Farnese, Berlin, Germany</p>
-      <p>Remmco International Gallery, Germany</p>
-      <p>Postbaht fair, Berlin, Germany</p>
+      <p id="indent">Palazzo Farnese, Berlin, Germany</p>
+      <p id="indent">Remmco International Gallery, Germany</p>
+      <p id="indent">Postbaht fair, Berlin, Germany</p>
       <p>
         <span>2001</span>Get Real Art Gallery, New York, USA
       </p>
-      <p>Exotic Art Gallery, Berlin, Germany</p>
-      <p>Borkenhagen Gallery, Germany</p>
+      <p id="indent">Exotic Art Gallery, Berlin, Germany</p>
+      <p id="indent">Borkenhagen Gallery, Germany</p>
 
       <p>
         <span>2000</span>Technology Center for Traffic, Hennigsdorf, Germany
       </p>
-      <p>W-E-Art Espace Austerlitz, Paris, France</p>
-      <p>G Art Gallery, New York, USA</p>
-      <p>Amos Eno Gallery, New York, USA</p>
+      <p id="indent">W-E-Art Espace Austerlitz, Paris, France</p>
+      <p id="indent">G Art Gallery, New York, USA</p>
+      <p id="indent">Amos Eno Gallery, New York, USA</p>
 
       <p>
         <span>1998</span>Kempinsky Plaza Hotel, Berlin, Germany
       </p>
-      <p>Inter-Continental Hotel, Los Angeles, USA</p>
-      <p>Gallery Berlin, Germany</p>
-      <p>lemm Gallery, Berlin, Germany</p>
-      <p>Miro Gallery, Karlsruhe, Germany</p>
+      <p id="indent">Inter-Continental Hotel, Los Angeles, USA</p>
+      <p id="indent">Gallery Berlin, Germany</p>
+      <p id="indent">lemm Gallery, Berlin, Germany</p>
+      <p id="indent">Miro Gallery, Karlsruhe, Germany</p>
 
       <p>
         <span>1997</span>Integra Gallery, Berlin, Germany

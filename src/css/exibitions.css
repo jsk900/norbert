@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
-
 * {
   margin: 0;
   padding: 0;
-  font-family: "Julius Sans One", sans-serif;
 }
 
 .exibitions {
@@ -48,12 +45,17 @@
   font-size: 0.7em;
   color: #220a02;
   line-height: 10px;
+  width: 40%;
 }
 .paragraphs p span {
   font-size: 1em;
-  color: #572c05;
+  color: orangered;
   font-weight: bold;
   padding-right: 4px;
+}
+#indent {
+  padding-left: 36px;
+  background-color: rgba(255, 165, 0, 0.2);
 }
 .paragraphs img {
   position: absolute;
@@ -70,6 +72,9 @@
   }
   .paragraphs img {
     display: none;
+  }
+  #indent {
+    background-color: transparent;
   }
 }
 @media screen and (max-width: 500px) {
