@@ -8,96 +8,78 @@ let indexHold = null;
 let idHold = null;
 
 class Detail extends PureComponent {
-  state = {
-    data: {},
-    description: "",
-    photo: {},
-    title: this.props.location.state.title,
-    api_description: this.props.location.state.api_description,
-    index: this.props.location.state.index
-  };
+    state = {
+        data: {},
+        description: "",
+        photo: {},
+        title: this.props.location.state.title,
+        api_description: this.props.location.state.api_description,
+        index: this.props.location.state.index
+    };
 
-  async componentDidMount() {
-    const data = await getFlickrInfo(`${this.state.api_description}`);
-    this.setState({
-      data: data,
-      description: data.photo.description._content,
-      photo: data.photo
-    });
-  }
-
-  async componentDidUpdate(prevProps, prevState) {
-    if (prevState.api_description !== this.state.api_description) {
-      const data = await getFlickrInfo(`${this.state.api_description}`);
-      this.setState({
-        data: data,
-        description: data.photo.description._content,
-        photo: data.photo,
-        title: data.photo.title._content
-      });
+    async componentDidMount() {
+        const data = await getFlickrInfo(`${this.state.api_description}`);
+        this.setState({
+            data: data,
+            description: data.photo.description._content,
+            photo: data.photo
+        });
     }
-  }
 
-  _MinusGetInfo = async () => {
-    this.state.index - 1 < 0
-      ? (indexHold = this.props.location.state.arrLength - 1)
-      : (indexHold = this.state.index - 1);
+    async componentDidUpdate(prevProps, prevState) {
+        if (prevState.api_description !== this.state.api_description) {
+            const data = await getFlickrInfo(`${this.state.api_description}`);
+            this.setState({
+                data: data,
+                description: data.photo.description._content,
+                photo: data.photo,
+                title: data.photo.title._content
+            });
+        }
+    }
 
-    idHold = this.props.location.state.results[indexHold].id;
+    _PlusGetInfo = async () => {
+        this.state.index + 1 === this.props.location.state.arrLength
+            ? (indexHold = 0)
+            : (indexHold = this.state.index + 1);
 
-    const api_description = `${this.props.location.state.url1}&api_key=${
-      this.props.location.state.api_key
-    }&photo_id=${idHold}${this.props.location.state.url2}`;
+        idHold = this.props.location.state.results[indexHold].id;
 
-    this.setState({
-      index: indexHold,
-      api_description: api_description,
-      data: await getFlickrInfo(`${api_description}`)
-    });
-  };
+        const api_description = `${this.props.location.state.url1}&api_key=${
+            this.props.location.state.api_key
+        }&photo_id=${idHold}${this.props.location.state.url2}`;
 
-  _PlusGetInfo = async () => {
-    this.state.index + 1 === this.props.location.state.arrLength
-      ? (indexHold = 0)
-      : (indexHold = this.state.index + 1);
+        await this.setState({
+            index: indexHold,
+            api_description: api_description,
+            data: await getFlickrInfo(`${api_description}`)
+        });
+    };
 
-    idHold = this.props.location.state.results[indexHold].id;
+    render() {
+        const { farm, server, id, secret } = this.state.photo;
+        const description = this.state.description;
+        const title = this.state.title;
 
-    const api_description = `${this.props.location.state.url1}&api_key=${
-      this.props.location.state.api_key
-    }&photo_id=${idHold}${this.props.location.state.url2}`;
-
-    await this.setState({
-      index: indexHold,
-      api_description: api_description,
-      data: await getFlickrInfo(`${api_description}`)
-    });
-  };
-
-  render() {
-    const { farm, server, id, secret } = this.state.photo;
-    const description = this.state.description;
-    const title = this.state.title;
-
-    return (
-      <div className="detail">
-        <div className="clip3" />
-        <React.Fragment>
-          <Header />
-          <div className="container">
-            <h6>{title}</h6>
-            <p>{description}</p>
-          </div>
-          <div className="image_container">
-            <img
-              onClick={this._PlusGetInfo}
-              src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
-            />
-          </div>
-        </React.Fragment>
-      </div>
-    );
-  }
+        return (
+            <div className="detail">
+                <div className="clip3" />
+                <React.Fragment>
+                    <Header />
+                    <div className="container">
+                        <h6>{title}</h6>
+                        <p>{description}</p>
+                    </div>
+                    <div className="image_container">
+                        <img
+                            onClick={this._PlusGetInfo}
+                            src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
+                        />
+                    </div>
+                </React.Fragment>
+            </div>
+        );
+    }
 }
 
 export default Detail;
