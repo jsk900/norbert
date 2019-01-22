@@ -7,9 +7,10 @@ import Spinner from "./Spinner";
 import "./css/gallery.css";
 import Secrets from "./secrets.json";
 
+const secret = process.env.DATABASE_URL || Secrets.pass
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${
-    Secrets.pass
+    secret
 }&format=json&nojsoncallback=1`;
 
 class App extends PureComponent {
