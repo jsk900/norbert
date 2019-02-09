@@ -7,10 +7,11 @@ import Spinner from "./Spinner";
 import "./css/gallery.css";
 
 let secret = process.env.pass;
+console.log(secret);
 
-if (typeof secret == "undefined" || !secret) {
-    secret = require("./secrets.json").pass;
-}
+// if (typeof secret == "undefined" || !secret) {
+//     secret = require("./secrets.json").pass;
+// }
 
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${secret}&format=json&nojsoncallback=1`;
