@@ -5,10 +5,12 @@ import Header from "./Header";
 import getFlickrInfo from "./getFlickrInfo";
 import Spinner from "./Spinner";
 import "./css/gallery.css";
-import Secrets from "./secrets.json";
+//import Secrets from "./secrets.json";
+
+const secret = process.env.pass || require("./secrets.json").pass;
 
 //secrets.json causing problems on heroku deploy
-const secret = process.env.pass || Secrets.pass;
+//const secret = process.env.pass || Secrets.pass;
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${secret}&format=json&nojsoncallback=1`;
 
