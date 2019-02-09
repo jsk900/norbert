@@ -8,7 +8,7 @@ import "./css/gallery.css";
 //import Secrets from "./secrets.json";
 
 let secret = process.env.pass;
-if (!process.env.pass) {
+if (!secret) {
     secret = require("./secrets.json").pass;
 }
 
