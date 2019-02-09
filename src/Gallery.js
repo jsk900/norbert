@@ -7,7 +7,10 @@ import Spinner from "./Spinner";
 import "./css/gallery.css";
 //import Secrets from "./secrets.json";
 
-const secret = process.env.pass || require("./secrets.json").pass;
+let secret = process.env.pass;
+if (!process.env.pass) {
+    secret = require("./secrets.json").pass;
+}
 
 //secrets.json causing problems on heroku deploy
 //const secret = process.env.pass || Secrets.pass;
