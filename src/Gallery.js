@@ -6,15 +6,10 @@ import getFlickrInfo from "./getFlickrInfo";
 import Spinner from "./Spinner";
 import "./css/gallery.css";
 
-let secret = process.env.pass;
-console.log(secret);
-
-// if (typeof secret == "undefined" || !secret) {
-//     secret = require("./secrets.json").pass;
-// }
+let account = "95388692@N07";
 
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
-const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${secret}&format=json&nojsoncallback=1`;
+const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${account}&format=json&nojsoncallback=1`;
 
 class App extends PureComponent {
     state = {
