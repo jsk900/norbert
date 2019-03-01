@@ -66,6 +66,8 @@
   -webkit-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
   -moz-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
   box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
+  height: 640px;
+  width: 640px;
 }
 @media screen and (max-width: 600px) {
   .clip3 {
