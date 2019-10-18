@@ -1,4 +1,4 @@
-const getFlickrInfo = async props => {
+export const getFlickrInfo = async props => {
   //Handle call from App to get Flickr Images and call from Detail to get description
   let info;
 
@@ -8,5 +8,3 @@ const getFlickrInfo = async props => {
   const data = await apiCall.json();
   return data;
 };
-
-export default getFlickrInfo;

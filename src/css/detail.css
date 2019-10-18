@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Gayathri:100&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gayathri', sans-serif;
 }
 
 .detail {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: #e7e7f3;
   animation: detail 1s ease-in forwards;
 }
 
@@ -26,34 +30,18 @@
   transform: translate(-2%, -70%);
 }
 
-.clip3 {
-  width: 100%;
-  height: 100%;
-  -webkit-clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
-  background-image: linear-gradient(
-    to right top,
-    #999907,
-    #aeb105,
-    #c2cb03,
-    #d7e401,
-    #ebff00
-  );
-  z-index: -1;
-  opacity: 0.4;
-  position: absolute;
-}
 .container h6 {
   padding-bottom: 15px;
   font-size: 0.8em;
   font-weight: bold;
-  color: #220a02;
+  letter-spacing: 1px;
+  color: rgba(56, 18, 17, 0.8);
 }
 .container p {
   width: 50%;
   padding-top: 5px;
   font-size: 0.7em;
-  color: #220a02;
+  color: rgba(56, 18, 17, 0.8);
 }
 .image_container {
   position: absolute;
@@ -63,16 +51,10 @@
 }
 .image_container img {
   cursor: pointer;
-  -webkit-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
-  -moz-box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
-  box-shadow: 4px 4px 4px 0px rgba(2, 37, 24, 1);
-  height: 640px;
-  width: 640px;
+  /* height: 640px;
+  width: 640px; */
 }
 @media screen and (max-width: 600px) {
-  .clip3 {
-    display: none;
-  }
   .container {
     width: 170px;
     top: 35%;
@@ -100,9 +82,6 @@
   }
 }
 @media only screen and (min-width: 360px) and (max-width: 640px) {
-  .clip3 {
-    display: none;
-  }
   .container {
     width: 170px;
     top: 20%;

@@ -1,14 +1,13 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import "./css/home.css";
+import './css/home.css';
 
-const Home = () => (
+export const Home = () => (
   <div className="home">
-    <div className="clip1" />
-    <NavLink to="/gallery" activeStyle={{ color: "#f78b10" }}>
-      <h1>Norbert Karrass</h1>
+    <h1>Norbert Karraß</h1>
+    <NavLink to="/gallery">
+      <div className="button"></div>
     </NavLink>
   </div>
 );
-export default Home;

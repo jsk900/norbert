@@ -1,9 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css?family=Gayathri:100&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", Light, sans-serif;
+  font-family: 'Gayathri', sans-serif;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
 }
 
 .home {
@@ -13,6 +20,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   animation: home 1s ease-in forwards;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes home {
@@ -24,38 +36,30 @@
   }
 }
 
-.clip1 {
-  width: 100%;
-  height: 100%;
-  -webkit-clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(98% 98%, 100% 0, 100% 100%, 0% 100%);
-  background-image: linear-gradient(
-    to right top,
-    #005930,
-    #266b37,
-    #427d3e,
-    #5d9044,
-    #7aa24b
-  );
-  z-index: -1;
-  opacity: 0.4;
-}
-.home h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #220a02;
+h1 {
+  color: rgba(56, 18, 17, 0.8);
   font-weight: 100;
+  font-size: 3em;
+  letter-spacing: 2px;
+  margin: 210px 0;
 }
-.home h1:hover {
-  color: #262626;
+
+.button {
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/button.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 500px) {
-  .clip1 {
-    display: none;
-  }
+
+.button:hover {
+  transform: translateY(20px);
+}
+
+/* @media screen and (max-width: 500px) {
   .home h1 {
     font-size: 1em;
   }
-}
+} */
