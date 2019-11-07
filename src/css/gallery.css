@@ -14,6 +14,18 @@
 }
 
 .gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px 20px 0 200px;
+}
+
+.gallery img {
+  padding: 5px 5px 0 5px;
+}
+
+/*Mosaic gallery
+ .gallery {
   line-height: 0;
   -webkit-column-count: 5;
   -webkit-column-gap: 0px;
@@ -30,7 +42,7 @@
   height: auto !important;
   transform: scale(0.95);
   animation: gallery 2s linear forwards;
-}
+} */
 
 @keyframes gallery {
   0% {
@@ -45,7 +57,7 @@
   filter: brightness(110%);
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .gallery {
     -moz-column-count: 4;
     -webkit-column-count: 4;
@@ -72,4 +84,4 @@
     -webkit-column-count: 1;
     column-count: 1;
   }
-}
+} */

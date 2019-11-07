@@ -62,16 +62,16 @@ export class Detail extends PureComponent {
     return (
       <div className="detail">
         <Header />
-        <div className="container">
-          <h6>{title}</h6>
-          <p>{description}</p>
-        </div>
         <div className="image_container">
           <img
             onClick={this.PlusGetInfo}
             src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
             alt="pic"
           />
+        </div>
+        <div className="container">
+          <h6>{title}</h6>
+          <p>{description}</p>
         </div>
       </div>
     );

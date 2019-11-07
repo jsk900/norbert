@@ -35,7 +35,7 @@ export class Gallery extends PureComponent {
       >
         <img
           key={flickr.id}
-          src={`https://farm${flickr.farm}.staticflickr.com/${flickr.server}/${flickr.id}_${flickr.secret}_n.jpg`}
+          src={`https://farm${flickr.farm}.staticflickr.com/${flickr.server}/${flickr.id}_${flickr.secret}_q.jpg`}
           alt={`${flickr.id}`}
         />
       </Link>
