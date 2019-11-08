@@ -9,7 +9,7 @@
 
 .exhibitions {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-color: #e7e7f3;
   animation: exhibitions 1s ease-in forwards;
 }
@@ -45,8 +45,6 @@
 }
 
 #indent {
-
-
   padding-left: 36px;
   /* background-color: #ffffff; */
 }
