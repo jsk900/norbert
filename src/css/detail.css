@@ -74,14 +74,14 @@
   }
 
   .container {
-    padding: 15px 5px 0 5px;
+    padding: 15px 5px 0 0;
   }
 
   .container h6 {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .container p {
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 }

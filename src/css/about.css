@@ -90,6 +90,7 @@
   }
 
   .grid h4 {
+    padding-top: 15px;
     font-size: 0.8em;
   }
 
@@ -101,7 +102,7 @@
   }
 
   .grid p:nth-of-type(1) {
-    padding-top: 2%;
+    padding-top: 10%;
     grid-row: 2;
     grid-column: 1;
   }
@@ -123,10 +124,5 @@
 
   .grid .image {
     display: none;
-    /* padding-top: 3%;
-    grid-row: 10;
-    grid-column: 1;
-    background-image: url('../images/collage.png');
-    background-repeat: no-repeat; */
   }
 }
