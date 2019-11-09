@@ -9,7 +9,7 @@
 
 .about {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: #e7e7f3;
   animation: about 1s ease-in forwards;
 }
