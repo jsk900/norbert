@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Gayathri:100&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Gayathri:100&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gayathri', sans-serif;
+  font-family: "Gayathri", sans-serif;
 }
 
 .exhibitions {
@@ -55,10 +55,10 @@
   left: 50%;
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
   .paragraphs {
-    padding-top: 10%;
-    padding-left: 30%;
+    padding-top: 3%;
+    padding-left: 35%;
   }
 
   .paragraphs img {
@@ -68,21 +68,14 @@
   #indent {
     background-color: transparent;
   }
-}
 
-@media screen and (max-width: 500px) {
   .paragraphs p {
-    font-size: 0.5em;
-    padding: 4px 5px;
+    font-size: 0.7em;
+    padding: 6px 5px;
   }
 
   .paragraphs p span {
-    font-size: 0.7em;
-  }
-}
-
-@media only screen and (min-width: 360px) and (max-width: 640px) {
-  .paragraphs {
-    padding-top: 2%;
+    font-size: 0.9em;
+    padding: 0 10px 5px 0;
   }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Header } from './Header';
-import './css/about.css';
+import React from "react";
+import { Header } from "./Header";
+import "./css/about.css";
 
 export const About = () => (
   <div className="about">

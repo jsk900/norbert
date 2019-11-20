@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Gayathri:100&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Gayathri:100&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gayathri', sans-serif;
+  font-family: "Gayathri", sans-serif;
 }
 
 .about {
@@ -76,49 +76,51 @@
 .grid .image {
   grid-row: 6;
   grid-column: 1;
-  background-image: url('../images/collage.png');
+  background-image: url("../images/collage.png");
   background-repeat: no-repeat;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 700px) {
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
   .grid {
-    padding-left: 25%;
-    grid-template-rows: 3% repeat(8, 8%);
-    align-items: flex-start;
-    justify-items: center;
-    grid-gap: 5px;
+    padding-left: 30%;
+    grid-template-rows: 5% repeat(4, auto);
+    justify-content: center;
+    grid-gap: 1%;
   }
 
   .grid h4 {
-    padding-top: 15px;
     font-size: 0.8em;
+    align-self: flex-start;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+    padding-top: 2%;
   }
 
   .grid p {
+    align-self: flex-start;
+    padding-top: 1%;
     text-align: center;
-    font-size: 0.6em;
-    padding-bottom: 2%;
-    padding-right: 25px;
+    font-size: 0.8em;
   }
 
   .grid p:nth-of-type(1) {
-    padding-top: 10%;
     grid-row: 2;
     grid-column: 1;
   }
 
   .grid p:nth-of-type(2) {
-    grid-row: 4;
+    grid-row: 3;
     grid-column: 1;
   }
 
   .grid p:nth-of-type(3) {
-    grid-row: 6;
+    grid-row: 4;
     grid-column: 1;
   }
 
   .grid p:nth-of-type(4) {
-    grid-row: 8;
+    grid-row: 5;
     grid-column: 1;
   }
 
