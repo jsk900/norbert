@@ -1,15 +1,15 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from "react";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
-import { Home } from './Home';
-import { Gallery } from './Gallery';
-import { Exhibitions } from './Exhibitions';
-import { About } from './About';
-import { Contact } from './Contact';
-import { Detail } from './Detail';
+import { Home } from "./Home";
+import { Gallery } from "./Gallery";
+import { Exhibitions } from "./Exhibitions";
+import { About } from "./About";
+import { Contact } from "./Contact";
+import { Detail } from "./Detail";
 
 export const Router = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/Gallery" component={Gallery} />
@@ -18,5 +18,5 @@ export const Router = () => (
       <Route path="/Contact" component={Contact} />
       <Route path="/Detail/:id" component={Detail} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
