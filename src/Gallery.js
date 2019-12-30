@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
-import { Header } from './Header';
-import { getFlickrInfo } from './getFlickrInfo';
-import { Spinner } from './Spinner';
-import './css/gallery.css';
+import { Header } from "./Header";
+import { getFlickrInfo } from "./getFlickrInfo";
+import { Spinner } from "./Spinner";
+import "./css/gallery.css";
 
 const api_key = `aa20374c2f047317fcb67372aed22bc1`;
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=95388692@N07&format=json&nojsoncallback=1`;
@@ -18,6 +18,7 @@ export class Gallery extends PureComponent {
   renderData = () =>
     this.state.results.map((flickr, index) => (
       <Link
+        key={flickr.id}
         to={{
           pathname: `/detail/${flickr.id}`,
           state: {
