@@ -1,13 +1,14 @@
-import React, { PureComponent } from "react";
-import { Link } from "react-router-dom";
+import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Header } from "./Header";
-import { getFlickrInfo } from "./getFlickrInfo";
-import { Spinner } from "./Spinner";
-import "./css/gallery.css";
+import { Header } from './Header';
+import { getFlickrInfo } from './getFlickrInfo';
+import { Spinner } from './Spinner';
+import './css/gallery.css';
 
-const api_key = `aa20374c2f047317fcb67372aed22bc1`;
-const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=95388692@N07&format=json&nojsoncallback=1`;
+const api_key = process.env.REACT_APP_API_KEY;
+const user_id = process.env.REACT_APP_USER_ID;
+const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${user_id}&format=json&nojsoncallback=1`;
 
 export class Gallery extends PureComponent {
   state = {
@@ -32,8 +33,7 @@ export class Gallery extends PureComponent {
             results: this.state.results,
             arrLength: this.state.results.length
           }
-        }}
-      >
+        }}>
         <img
           key={flickr.id}
           src={`https://farm${flickr.farm}.staticflickr.com/${flickr.server}/${flickr.id}_${flickr.secret}_q.jpg`}
@@ -51,10 +51,10 @@ export class Gallery extends PureComponent {
       return <Spinner />;
     }
     return (
-      <div className="main">
+      <div className='main'>
         <Header />
 
-        <div className="gallery">{this.renderData()}</div>
+        <div className='gallery'>{this.renderData()}</div>
       </div>
     );
   }

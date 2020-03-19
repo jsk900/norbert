@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 
-import { Header } from "./Header";
-import { getFlickrInfo } from "./getFlickrInfo";
-import "./css/detail.css";
+import { Header } from './Header';
+import { getFlickrInfo } from './getFlickrInfo';
+import './css/detail.css';
 
 let indexHold = null;
 let idHold = null;
@@ -10,7 +10,7 @@ let idHold = null;
 export class Detail extends PureComponent {
   state = {
     data: {},
-    description: "",
+    description: '',
     photo: {},
     title: this.props.location.state.title,
     api_description: this.props.location.state.api_description,
@@ -60,17 +60,17 @@ export class Detail extends PureComponent {
     const title = this.state.title;
 
     return (
-      <div className="detail">
+      <div className='detail'>
         <Header />
-        <div className="image_container">
+        <div className='image_container'>
           <img
             key={id}
             onClick={this.PlusGetInfo}
             src={`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_z.jpg`}
-            alt="pic"
+            alt='pic'
           />
         </div>
-        <div className="container">
+        <div className='container'>
           <h6>{title}</h6>
           <p>{description}</p>
         </div>
