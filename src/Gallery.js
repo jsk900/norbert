@@ -6,8 +6,10 @@ import { getFlickrInfo } from './getFlickrInfo';
 import { Spinner } from './Spinner';
 import './css/gallery.css';
 
+
 const api_key = process.env.REACT_APP_API_KEY;
 const user_id = process.env.REACT_APP_USER_ID;
+
 const api_images = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${api_key}&user_id=${user_id}&format=json&nojsoncallback=1`;
 
 export class Gallery extends PureComponent {
