@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Gayathri:100&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Gayathri:100&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gayathri", sans-serif;
+  font-family: 'Gayathri', sans-serif;
 }
 
 .contact {
@@ -46,6 +46,12 @@
 .contact_details p a {
   color: #3b558f;
   font-weight: bold;
+}
+
+.contact_details .icon {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 @media screen and (max-width: 600px) {
